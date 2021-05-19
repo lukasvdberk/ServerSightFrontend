@@ -117,18 +117,19 @@
 
     .icon, .side-bar {
         display: inline-block;
-        width: 20%;
+        width: 30%;
     }
 
     .icon {
         position: relative;
-        height: 100px;
+        height: 180px;
+        padding: 5px;
     }
 
     .main-content {
         display: inline-block;
         vertical-align: top;
-        width: 79%;
+        width: 69%;
     }
 
     details {

@@ -6,14 +6,23 @@
 </script>
 
 <style>
+    ul {
+        list-style-type: none;
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+
     li {
-        margin-top: 10px;
+        width: 95%;
+        margin-bottom: 10px;
     }
 </style>
-<ol>
+
+<ul>
     {#each networkAdapters as networkAdapter}
         <li>
             <NetworkAdapter {networkAdapter} />
         </li>
     {/each}
-</ol>
+</ul>
