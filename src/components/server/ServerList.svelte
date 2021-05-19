@@ -15,7 +15,7 @@
 <style>
     ul {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         list-style-type: none;
         grid-gap: 25px;
         margin: 0;
