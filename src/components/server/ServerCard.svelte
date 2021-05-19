@@ -26,7 +26,7 @@
 
     .circle {
         height: 25px !important;
-        width: 28px !important;;
+        width: 30px !important;;
         margin-top: 15px;
         border-radius: 50%;
         display: inline-block;

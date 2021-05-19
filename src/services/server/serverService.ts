@@ -10,7 +10,14 @@ export class ServerService {
      */
     static async getUserServers(searchQuery?: { name: string, powerstatus: boolean, ip: string}): Promise<Server[]> {
         try {
-            const response = (await HttpClient.get('servers', searchQuery))
+            let filterToSend: any = searchQuery
+            if (filterToSend.powerstatus === undefined || null) {
+                filterToSend = {
+                    name: searchQuery.name,
+                    ip: searchQuery.ip
+                }
+            }
+            const response = (await HttpClient.get('servers', filterToSend))
 
             if (response.statusCode === 200) {
                 return response.content as Server[]
