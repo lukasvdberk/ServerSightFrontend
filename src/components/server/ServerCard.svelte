@@ -3,16 +3,47 @@
     import Link from "../shared/buttons/Link.svelte";
     import Img from "../shared/Img.svelte";
     import {BASE_MEDIA_URL} from "../../config";
+    import {goto} from "@sapper/app";
+
     export let server: Server
 </script>
 
 <style>
+    div.container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 25px;
+        height: 50px;
+    }
+
+    h1 {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+    }
+
+    .circle {
+        height: 25px !important;
+        width: 28px !important;;
+        margin-top: 15px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    div.link {
+        display: inline-block;
+        width: 8rem;
+        margin-top: 12px;
+    }
+
     article {
         position: relative;
         box-shadow: 0 1px 1px 0 rgba(0,0,0,0.07),0 3px 1px -2px rgba(0,0,0,0.6),0 1px 5px 0 rgba(0,0,0,0.2);
         border-radius: 5px;
-        text-align: left;
         padding: 5px;
+        text-align: center;
     }
 
     div.img {
@@ -28,14 +59,8 @@
         display: block;
         padding-top: 5px;
     }
-
-    div {
-        text-align: center;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
 </style>
-<article>
+<article on:click={goto('/servers/' + server.id,  {}).then}>
     <div class="img">
         {#if server.imagePath}
             <Img src={ BASE_MEDIA_URL  + server.imagePath} alt={server.name} />
@@ -43,12 +68,15 @@
             <Img src="no-server-image.svg" alt={server.name} />
         {/if}
     </div>
-    <h1>{server.name}</h1>
-    <!--TODO add badge-->
-    <span>Server power status: {server.powerStatus ? 'on': 'off'}</span>
-    <div>
-        <Link href="/servers/{server.id}">
-            <span>View server</span>
-        </Link>
+    <div class="container">
+        <span class="circle" style="background-color: {server.powerStatus ? 'green': 'red'}; color: {server.powerStatus ? 'green': 'red'}">
+            {server.powerStatus ? 'on': 'off'}
+        </span>
+        <h1>{server.name}</h1>
+        <div class="link">
+            <Link href="/servers/{server.id}">
+                <span>View</span>
+            </Link>
+        </div>
     </div>
 </article>
