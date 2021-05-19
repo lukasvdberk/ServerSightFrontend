@@ -34,7 +34,7 @@
 
     div.link {
         display: inline-block;
-        width: 8rem;
+        width: 14rem;
         margin-top: 12px;
     }
 
@@ -69,8 +69,9 @@
         {/if}
     </div>
     <div class="container">
-        <span class="circle" style="background-color: {server.powerStatus ? 'green': 'red'}; color: {server.powerStatus ? 'green': 'red'}">
-            {server.powerStatus ? 'on': 'off'}
+        <span
+            class="circle"
+            style="background-color: {server.powerStatus ? '#70a444': '#d0392f'}; color: {server.powerStatus ? 'green': 'red'}">
         </span>
         <h1>{server.name}</h1>
         <div class="link">

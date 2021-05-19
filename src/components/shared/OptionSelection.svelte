@@ -1,14 +1,16 @@
 <script lang="ts">
-    import {createEventDispatcher} from "svelte";
-
     export let options: {name: string, value:boolean}[]
-
-    const eventDispatcher = createEventDispatcher()
 </script>
 
 <style>
     button {
+        width: 25px;
+        height: 25px;
         display: inline-block;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid black;
+        margin-right: 5px;
     }
     div {
         display: flex;
@@ -20,6 +22,7 @@
         background-color: white;
         text-align: left;
         padding: 5px;
+        margin-top: 5px;
     }
 </style>
 

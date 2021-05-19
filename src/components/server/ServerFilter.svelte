@@ -12,11 +12,11 @@
 
     let powerOptions: {name: string, value:boolean}[] = [
         {
-            name: 'Online',
+            name: '🟢 Online',
             value: false
         },
         {
-            name: 'Offline',
+            name: '🔴 Offline',
             value: false
         }
     ]
@@ -30,8 +30,8 @@
     }
 
     function onNewPowerSettings(powerOptions: {name: string, value:boolean}[]) {
-        const powerOn = powerOptions.filter((option) => option.name === 'Online' && option.value).length > 0
-        const powerOff = powerOptions.filter((option) => option.name === 'Offline' && option.value).length > 0
+        const powerOn = powerOptions.filter((option) => option.name.includes('Online') && option.value).length > 0
+        const powerOff = powerOptions.filter((option) => option.name.includes('Offline') && option.value).length > 0
 
 
         if(powerOn) powerStatus = true
