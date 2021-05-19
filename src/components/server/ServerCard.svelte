@@ -60,7 +60,7 @@
         padding-top: 5px;
     }
 </style>
-<article on:click={goto('/servers/' + server.id,  {}).then}>
+<article>
     <div class="img">
         {#if server.imagePath}
             <Img src={ BASE_MEDIA_URL  + server.imagePath} alt={server.name} />
