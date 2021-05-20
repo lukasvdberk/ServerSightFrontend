@@ -22,9 +22,8 @@
 </script>
 <style>
     .gradient-background, .gradient-background:after {
-        position: fixed;
-        height: 100%;
-        width: 100%;
+        height: 100vh;
+        width: 100vw;
         background: linear-gradient(180deg, rgba(52, 73, 102, 1) 0%, rgba(13, 24, 33, 1) 100%);
     }
 
@@ -40,6 +39,7 @@
 
     .feature-grid {
         display: grid;
+        height: 100%;
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         list-style-type: none;
         grid-gap: 25px;
@@ -123,6 +123,10 @@
         div.link-wrapper {
             width: 100%;
         }
+
+        .gradient-background, .gradient-background:after {
+            height: 200vh;
+        }
     }
 </style>
 
@@ -168,7 +172,7 @@
                     <p>Get usages of different resources on your server</p>
                     <ul>
                         <li>Open ports</li>
-                        <li>Ip’s</li>
+                        <li>IP’s</li>
                         <li>Hard disk usage</li>
                         <li>CPU usage</li>
                         <li>RAM Usage</li>
