@@ -22,8 +22,8 @@
 </script>
 <style>
     .gradient-background, .gradient-background:after {
+        width: 100%;
         height: 100vh;
-        width: 100vw;
         background: linear-gradient(180deg, rgba(52, 73, 102, 1) 0%, rgba(13, 24, 33, 1) 100%);
     }
 
@@ -39,7 +39,7 @@
 
     .feature-grid {
         display: grid;
-        height: 100%;
+        height: 40%;
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         list-style-type: none;
         grid-gap: 25px;
@@ -88,6 +88,10 @@
     }
 
     @media only screen and (max-width: 1000px) {
+        .gradient-background {
+            height: 100%;
+        }
+
         img {
             display: block;
             width: 25%;
@@ -124,7 +128,7 @@
             width: 100%;
         }
 
-        .gradient-background, .gradient-background:after {
+        .gradient-background{
             height: 200vh;
         }
     }

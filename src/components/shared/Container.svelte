@@ -12,13 +12,13 @@
 
     section.large {
         margin: 0 auto;
-        height: 100vh;
+        height: 100%;
         width: 60%;
     }
 
     section.super-large {
         margin: 0 auto;
-        height: 100vh;
+        height: 100%;
         width: 70%;
     }
 
