@@ -13,13 +13,13 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
         padding: 25px;
         height: 50px;
     }
 
     h1 {
         display: inline-block;
+        width: 60%;
         margin: 0;
         padding: 0;
     }
@@ -27,14 +27,14 @@
     .circle {
         height: 25px !important;
         width: 30px !important;;
-        margin-top: 15px;
+        margin-top: 8px;
         border-radius: 50%;
         display: inline-block;
     }
 
     div.link {
         display: inline-block;
-        width: 14rem;
+        width: 35%;
         margin-top: 12px;
     }
 
@@ -44,6 +44,8 @@
         border-radius: 5px;
         padding: 5px;
         text-align: center;
+        width: 100%;
+        height: 100%;
     }
 
     div.img {
@@ -58,6 +60,43 @@
         text-align: center;
         display: block;
         padding-top: 5px;
+    }
+
+    @media screen and (max-width: 1300px) {
+        article {
+            width: 100%;
+        }
+
+        .circle {
+            float: left;
+            padding: 5px;
+        }
+
+        h1 {
+            float: right;
+            width: 80%;
+            padding: 0;
+            margin: 0;
+        }
+
+        div.container {
+            height: 100px;
+        }
+
+        div.container, div.link {
+            display: block;
+            width: 95%;
+        }
+
+        div.link {
+            padding-top: 50px;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        article {
+            width: 97.5%;
+        }
     }
 </style>
 <article>
