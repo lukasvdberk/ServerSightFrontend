@@ -1,13 +1,4 @@
 {
   "version": 2,
-  "builds": [{
-    "src": "__sapper__/build/server/server.js",
-    "use": "@now/node-server"
-  }],
-  "routes": [{"handle": "filesystem"},
-    {
-      "src": "/.*",
-      "dest": "__sapper__/build/"
-    }
-  ]
+  "builds": [{ "src": "package.json", "use": "now-sapper" }]
 }
